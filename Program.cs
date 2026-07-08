@@ -91,3 +91,4 @@ Console.WriteLine($"Ошибок при отправке:                {sentFa
 Console.WriteLine($"Подробный лог: {Path.GetFullPath(options.LogFile)}");
 
 logger.LogInfo($"Тест завершён. Всего={seq}, успешно={sentOk}, ошибок={sentFailed}");
+Console.ReadLine();
