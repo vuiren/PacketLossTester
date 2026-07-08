@@ -124,7 +124,6 @@ public static class ConsoleInput
             Protocol = PromptProtocol("Протокол", defaults.Protocol),
             IntervalMs = PromptInt("Интервал между пакетами, мс", defaults.IntervalMs, min: 1),
             Count = PromptLong("Количество пакетов (0 = бесконечно, до Ctrl+C)", defaults.Count, min: 0),
-            PayloadSize = PromptInt("Доп. размер полезной нагрузки, байт", defaults.PayloadSize, min: 0),
             LogFile = PromptString("Путь к файлу лога (CSV)", defaults.LogFile),
             TimeoutMs = PromptInt("Таймаут TCP-соединения/записи, мс", defaults.TimeoutMs, min: 1)
         };

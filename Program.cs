@@ -50,7 +50,7 @@ try
     while (!cts.IsCancellationRequested && (options.Count == 0 || seq < options.Count))
     {
         seq++;
-        byte[] data = Packet.Build(seq, options.PayloadSize);
+        byte[] data = Packet.Build(seq);
 
         try
         {

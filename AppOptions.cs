@@ -23,9 +23,6 @@ public sealed class AppOptions
     /// <summary>Количество пакетов для отправки. 0 = отправлять, пока не нажмут Ctrl+C.</summary>
     public long Count { get; set; } = 0;
 
-    /// <summary>Размер полезной нагрузки (доп. "мусорные" данные) в байтах.</summary>
-    public int PayloadSize { get; set; } = 0;
-
     /// <summary>Путь к файлу лога.</summary>
     public string LogFile { get; set; } = "packet_log.csv";
 

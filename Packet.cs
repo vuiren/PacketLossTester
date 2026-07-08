@@ -10,18 +10,9 @@ namespace PacketLossTester;
 /// </summary>
 public static class Packet
 {
-    public static byte[] Build(long seq, int paddingSize)
+    public static byte[] Build(long seq)
     {
         string sentAt = DateTime.UtcNow.ToString("O", CultureInfo.InvariantCulture); // ISO-8601 с миллисекундами
-        string header = $"{seq}|{sentAt}|{paddingSize}|";
-
-        var sb = new StringBuilder(header);
-        if (paddingSize > 0)
-        {
-            sb.Append('X', paddingSize);
-        }
-        sb.Append('\n'); // разделитель сообщений, важно для TCP-потока
-
-        return Encoding.UTF8.GetBytes(sb.ToString());
+        return Encoding.UTF8.GetBytes($"{seq}|{sentAt}|\n");
     }
 }
